@@ -1,0 +1,45 @@
+// Problem 1 
+
+
+
+
+// Problem 2
+
+public class triplets_who_givesum_zero {
+    public static void main(String[] args) {
+        int arr[]={-1,0,1,2,-1,4};
+        for(int i =0 ; i<arr.length-4 ; i++) {
+            int a = arr[i];
+            int b = arr[i + 1];
+            int c = arr[i + 2];
+            if (a + b + c == 0) {
+                System.out.printf("%d,%d,%d", a, b, c);
+            }
+        }
+    }
+}
+
+
+// Problem 3
+
+
+
+import java.util.Scanner;
+public class palindrome {
+    public static void main(String[] args) {
+        System.out.println("enter the string for checking palindrome or not");
+        Scanner sc = new Scanner(System.in); 
+        String str = sc.next();        
+       str = str.toLowerCase();
+       boolean flag = true;
+        for (int i =0; i <= (str.length()/2) ; i++){
+            char first = str.charAt(i);
+            char last = str.charAt(str.length()-1-i );
+            if (first != last ) {
+                flag = false;
+                break;
+            }
+        }
+        System.out.println(flag ? "true" : "false" );
+    }
+}
